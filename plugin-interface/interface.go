@@ -1,32 +1,18 @@
 package plugin_interface
 
-import "reflect"
+import (
+	"fmt"
+)
 
-type pluginType string
+type PluginType string
 
-var pluginTypes  = [2]pluginType{"provider", "flavour"}
-
-func in_array(val interface{}, array interface{}) (exists bool, index int) {
-	exists = false
-	index = -1
-
-	switch reflect.TypeOf(array).Kind() {
-	case reflect.Slice:
-		s := reflect.ValueOf(array)
-
-		for i := 0; i < s.Len(); i++ {
-			if reflect.DeepEqual(val, s.Index(i).Interface()) == true {
-				index = i
-				exists = true
-				return
-			}
-		}
+func (p PluginType) Validate() (bool) {
+	if p == "provider" || p == "flavour" {
+		return true
 	}
-
-	return
+	return false
 }
 
-
-func (p pluginType) validate(){
-	in_array(p, pluginTypes)
+func (p PluginType) ToString() string{
+	return fmt.Sprintf("%s",p)
 }
