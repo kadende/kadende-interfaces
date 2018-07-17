@@ -4,7 +4,6 @@ import (
 	"github.com/kadende/kadende-interfaces/spi"
 	"github.com/kadende/kadende-interfaces/spi/instance"
 	"github.com/kadende/kadende-interfaces/pkg/types"
-	"github.com/kadende/kadende-interfaces/spi/group"
 	"github.com/kadende/kadende-interfaces/spi/controller"
 )
 
