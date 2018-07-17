@@ -6,16 +6,9 @@ import (
 	"github.com/kadende/kadende-interfaces/pkg/types"
 )
 
-const (
-	// GroupTag is the name of the tag that contains the group name
-	GroupTag = "infrakit.group"
-	// ConfigSHATag is the name of the tag that contains the group SHA hash
-	ConfigSHATag = "infrakit.config.hash"
-)
-
 // InterfaceSpec is the current name and version of the Group API.
 var InterfaceSpec = spi.InterfaceSpec{
-	Name:    "Group",
+	Name:    "Controller",
 	Version: "0.0.1",
 }
 
