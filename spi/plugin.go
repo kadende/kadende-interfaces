@@ -7,8 +7,14 @@ import (
 
 type PluginType string
 
+const (
+	Provider="provider"
+	Flavor="flavor"
+	Controller="controller"
+)
+
 func (p PluginType) Validate() (bool) {
-	if p == "provider" || p == "flavour" {
+	if p == Provider || p == Flavor || p == Controller {
 		return true
 	}
 	return false
